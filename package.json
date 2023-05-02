@@ -6,9 +6,7 @@
   "scripts": {
     "api": "npm --prefix ./server run dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "concurrently --names \"server, client\" -c \"green,magenta\" \"npm run api\"",
-    "build": "tsc",
-    "start": "ts-node server/src/index.ts"
+    "dev": "concurrently --names \"server, client\" -c \"green,magenta\" \"npm run api\""
   },
   "repository": {
     "type": "git",
