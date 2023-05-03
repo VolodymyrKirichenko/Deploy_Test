@@ -6,7 +6,7 @@ import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core';
 import { typeDefs } from './schema';
 import { resolvers } from './resolvers';
 
-const PORT = process.env.PORT;
+// const PORT = process.env.PORT;
 
 
 const api = async () => {
@@ -28,7 +28,7 @@ const api = async () => {
 
   const graphqlSendBoxUrl = ['https://studio.apollographql.com'];
 
-  const port = PORT;
+  const port = 4000;
 
   await server.start();
 
