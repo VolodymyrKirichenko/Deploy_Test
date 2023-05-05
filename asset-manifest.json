@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.js": "/Deploy_Test/static/js/main.fc935710.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/Deploy_Test/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/Deploy_Test/index.html",
+    "main.fc935710.js.map": "/Deploy_Test/static/js/main.fc935710.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/Deploy_Test/static/js/787.c4e7f8f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.fc935710.js"
+  ]
+}
