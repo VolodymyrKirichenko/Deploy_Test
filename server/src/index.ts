@@ -5,16 +5,17 @@ import * as http from 'http';
 import { ApolloServerPluginDrainHttpServer } from 'apollo-server-core';
 import { typeDefs } from './schema';
 import { resolvers } from './resolvers';
+import 'dotenv/config';
 
-// const PORT = process.env.PORT;
-
+const port = process.env.PORT || 4000;
+const defaultLocale = process.env.DEFAULT_LOCALE;
 
 const api = async () => {
   const app = express();
   const httpServer = http.createServer(app);
 
   const context = ({req}: { req: Request}) => ({
-    locale: req?.headers?.locale || 'en-US'
+    locale: req?.headers?.locale || defaultLocale
   });
 
   const server = new ApolloServer({
@@ -28,7 +29,7 @@ const api = async () => {
 
   const graphqlSendBoxUrl = ['https://studio.apollographql.com'];
 
-  const port = 4000;
+  // const port = 4000;
 
   await server.start();
 
@@ -39,7 +40,7 @@ const api = async () => {
       credentials: true,
     },
     path: '/api',
-  });``;
+  });
 
   await new Promise<void>(
     (resolve) => httpServer.listen({ port }, resolve)
